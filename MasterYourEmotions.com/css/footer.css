@@ -1,0 +1,168 @@
+/* Footer */
+
+#main-footer-container {
+    display: flex;
+    margin: 0;
+    bottom: 0;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    min-height: 20vh;
+    background-image: linear-gradient(to bottom left, #D2C5FFFF, #ABE4FAFF);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@media screen and (max-width: 1424px) {
+    #main-footer-container {
+        display: flex;
+        flex-wrap: wrap; 
+        flex-direction: column;
+        justify-content: first space-evenly;
+        align-items: center;
+        width: 100%;
+        height: 85vh;
+        
+    }
+
+    .footer-newsletter,
+    .footer-contact,
+    .footer-links,
+    .footer-about {
+        min-width: 50%;
+        max-width: 80%;
+        max-height: 25vh;
+        min-height: 15vh;
+    }
+
+    .footer-newsletter h3,
+    .footer-contact h3,
+    .footer-links h3,
+    .footer-about h3 {
+    font-size: 2vh;
+    
+}
+    .footer-contact a,
+    .footer-links a,
+    .footer-links i,
+    .footer-about a,
+    .footer-about p,
+    .footer-contact button{
+    font-size: 2vh;
+    
+}
+
+.footer-newsletter input {
+        font-size: 1.5vh;
+}
+    
+    .footer-newsletter,
+    .footer-contact,
+    .footer-links {
+        border-bottom: 1px solid rgb(43, 43, 43, 0.5);
+    }
+}
+
+
+
+.footer-newsletter h3,
+.footer-contact h3,
+.footer-links h3,
+.footer-about h3 {
+    color: #323232;
+}
+
+.footer-newsletter {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 13vh;
+    width: 25vh;
+}
+
+#main-footer-container input {
+    margin: 2px;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    text-align: start;
+    background-color: #e4e4e4;
+    color: #323232;
+}
+
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 13vh;
+    width: 25vh;
+}
+
+.footer-contact a, .footer-contact i, .footer-contact button {
+    padding-bottom: 2px;
+    padding-top: 2px;
+}
+
+.footer-contact i{
+    flex-direction: row;
+    color: #323232;
+    padding-right: 5px;
+    font-size: 20px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-justify: center;
+    height: 13vh;
+    width: 25vh;
+}
+
+.footer-links a{
+    padding-bottom: 2px;
+    padding-top: 2px;
+}
+
+.footer-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 13vh;
+    width: 25vh;
+}
+
+.footer-about p{
+    padding-top: 2px;
+    color: #323232;
+}
+
+.footer-contact a, 
+.footer-links a, 
+.footer-about a,
+.footer-contact button{
+    text-decoration: none;
+    color: #323232;
+}
+
+.footer-contact a:hover, 
+.footer-links a:hover, 
+.footer-about a:hover {
+    text-decoration: underline;
+}
+
+/* css till direct message knappen*/
+.footer-contact button{
+    border: None;
+    background-color: transparent;
+}
+
+.footer-contact button:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+

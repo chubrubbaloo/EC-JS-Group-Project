@@ -1,0 +1,118 @@
+/* -------------- Navbar ---------------- */
+#navbar * {
+    color: #323232;
+}
+
+#navbar a {
+    text-decoration: none;
+    transition-duration: 0.33s;
+}
+
+#navbar {
+    margin: 0;
+    padding: 0;
+    height: 7vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    border-width: 0;
+    border-bottom-width: 0.1vh;
+    border-style: solid;
+    border-color: #424242;
+    background-image: linear-gradient(to top left, #D2C5FFAF, #ABE4FAAF);
+    backdrop-filter: blur(8px);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+
+    animation: fadeIn ease 2s;
+
+    }
+    #navbar > div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    #navbar > div.left {
+            height: 90%;
+            width: 20%;
+            min-width: fit-content;
+
+            justify-content: end;
+        }
+        #navbar > div.left a {
+            height: 100%;
+        }
+        #navbar > div.left a:hover {
+            transform: scale(1.05);
+        }
+        #navbar > div.left img {
+            height: 100%;
+
+            opacity: 0;
+            animation: fadeIn ease 1s;
+            animation-fill-mode: forwards;
+            animation-delay: 0.4s;
+        }
+
+    #navbar > div.right {
+        height: 100%;
+        width: 55%;
+        min-width: fit-content;
+        }
+        #navbar > div.right > section {
+            height: 100%;
+            width: 75%;
+            min-width: fit-content;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+        }
+        #navbar > div.right > section a {
+            width: fit-content;
+            height: 90%;
+            padding-right: 2vw;
+            padding-left: 2vw;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            opacity: 0;
+            animation: fadeIn ease 1s;
+            animation-fill-mode: forwards;
+        }
+        #navbar > div.right > section a:hover {
+            transform: scale(1.18);
+        }
+        #navbar > div.right > section h6 {
+            font-family: "Trebuchet MS", sans-serif;
+        }
+        #navbar > div.right > section i {
+            font-size: 4vh;
+        }
+            #navbar #services {
+                animation-delay: 0.7s;
+            }
+            #navbar #about-me {
+                animation-delay: 0.85s;
+            }
+            #navbar #blogg {
+                animation-delay: 1s;
+            }
+
+/* --- navbar animations --- */
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+

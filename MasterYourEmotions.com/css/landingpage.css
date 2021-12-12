@@ -1,0 +1,134 @@
+/* purple colour: #D2C5FFFF rgb(205, 192, 252)
+    grey colour: #DBDBDBFF	rgb(244, 244, 244)
+ */
+ /*mörkare ljuslila: (223, 216, 242); ljusare ljuslila: (238, 234, 248); standard-lila: (205, 192, 252); moln-lila-grått: (202, 190, 207); himmels-blått: (161, 220, 253); ljusare blå: rgb(194, 210, 253); background-image: linear-gradient(to bottom left, #D2C5FFFF, #ABE4FAFF);*/
+
+
+ /*2021-11-02 kl. 13:17 Filip Sjöstrand*/
+ * {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: rgb(43, 43, 43);
+}
+
+a {
+   text-decoration: none;
+}
+
+#hero-section {
+   margin-top: 7vh;
+   position: relative;
+   width: 100%;
+}
+
+.hero-section-background-wrapper {
+   width: 100%;
+   height: calc(100vh - 7vh);
+   display: flex;
+   object-fit: cover;
+   background-color: rgba(0, 0, 0, 0.2);
+   border-bottom: solid 1px rgb(43, 43, 43);
+}
+
+#hero-section video {
+   position: absolute;
+   width: 100%;
+   height: calc(100vh - 7vh);
+   min-width: 100%;
+   min-height: 100%;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   object-fit: cover;
+   z-index: -1;
+}
+
+.hero-video-overlay {
+   animation-name: slidein;
+   animation-duration: 10s;
+   animation-timing-function: initial;
+   position: absolute;
+   width: 100%;
+   height: calc(100vh - 7vh);
+  
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+.hero-video-overlay-heading {
+   padding-top: 5vh;
+   position: absolute;
+   width: 100%;
+   height: calc(100vh - 7vh);
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
+}
+
+.hero-video-overlay-preamble {
+   padding-top: 5vh;
+   position: absolute;
+   width: 100%;
+   height: calc(100vh - 7vh);
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
+}
+
+@keyframes slidein {
+  from {
+     margin-left: -85%;
+  }
+      to {
+         transform: translateX(0%);
+      }
+}
+
+.hero-video-overlay a {
+   border: 2px solid rgb(43, 43, 43);
+   border-radius: 10px;
+   font-size: 20px;
+   padding: 10px 20px;
+}
+
+.hero-video-overlay a:hover {
+   background-color: rgb(98, 90, 64);
+   color: rgb(43, 43, 43);
+}
+
+/* RESPONSIVE RULES */
+@media (min-aspect-ratio: 16/9) {
+   #hero-section {
+      width: 100%;
+      height: auto;
+   }
+
+   /* Idé: Fixa 3 kort/Rullgardins-meny (javascript?)
+   media-query-anpassning för liten skärm: grid-template-columns: 100%; */
+}
+
+@media (max-aspect-ratio: 16/9) {
+   #hero-section {
+      width: auto;
+      height: 100%;
+   }
+}
+
+/* Bild för mobilvy */
+@media (max-width: 767px) {
+   #videoBG {
+      display: none;
+   }
+   .hero-section-background-wrapper {
+      background: url("../media/img/Poster_shoreline.png");
+      background-repeat: no-repeat;
+      background-position: center; 
+      background-attachment: fixed;
+      background-size: cover;
+   }
+}

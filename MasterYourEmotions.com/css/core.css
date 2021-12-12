@@ -1,0 +1,15 @@
+/* purple colour: #D2C5FFFF
+    grey colour: #DBDBDBFF
+    blue colour: #ABE4FAFF
+ */
+
+/* --------------  Core  ---------------- */
+body {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}

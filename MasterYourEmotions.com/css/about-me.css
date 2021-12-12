@@ -1,0 +1,252 @@
+                        /* About-me-section*/
+                        
+                        * {
+                            box-sizing: border-box;
+                            padding: 0;
+                            margin: 0;
+                        }
+                        
+                        .about-me-main-image img {
+                            height: 80vh;
+                            width: 100%;
+                            object-fit: cover;
+                        }
+                        
+                        .flex-container {
+                            margin: 20px 0 20px 0;
+                            display: flex;
+                            justify-content: center;
+                        }
+                        
+                        .team-images {
+                            margin: auto;
+                            justify-content: space-between;
+                            display: flex;
+                            width: 80%;
+                        }
+                        
+                        .modal-button {
+                            cursor: pointer;
+                        }
+                        
+                        .about-me-paragraphs {
+                            width: 80%;
+                        }
+                        
+                        .about-me-paragraphs p {
+                            font-family: Arial, Helvetica, sans-serif;
+                        }
+                        
+                        .mid-page-image {
+                            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
+                            border-radius: 12px;
+                            height: 100vh;
+                            width: 80%;
+                            object-fit: cover;
+                        }
+                        
+                        .about-me-quote {
+                            text-align: center;
+                            width: 80%;
+                            font-size: xx-large;
+                            font-family: Arial, Helvetica, sans-serif;
+                        }
+                        
+                        #cards-wrapper {
+                            display: flex;
+                            justify-content: space-between;
+                            flex-wrap: wrap;
+                            margin: auto;
+                            width: 80%;
+                        }
+                        
+                        .employees-headline {
+                            font-size: 40px;
+                            font-weight: bolder;
+                            text-decoration: underline;
+                            font-family: Arial, Helvetica, sans-serif;
+                            text-align: center;
+                            margin-top: 10px;
+                        }
+                        
+                        .card {
+                            object-fit: cover;
+                            display: flex;
+                            justify-content: center;
+                            align-items: flex-start;
+                            padding-top: 20px;
+                            height: 175px;
+                            width: 250px;
+                            border-radius: 12px 12px 12px 12px;
+                            background-image: url(../media/img/hands.jpg);
+                            color: black;
+                            transition: 0.5s;
+                            margin: 20px 0px 35px 0px;
+                            box-shadow: 5px 5px #888888;
+                        }
+                        
+                        @media (max-width:1300px) {
+                            .card {
+                                font-size: 30px;
+                                padding-top: 0;
+                                align-items: center;
+                                width: 100%;
+                                background-image: linear-gradient(to top left, #D2C5FFFF, #ABE4FAFF);
+                            }
+                        }
+                        
+                        .card:hover {
+                            animation-name: wiggle;
+                            animation-duration: 0.3s;
+                            cursor: pointer;
+                        }
+                        
+                        @keyframes wiggle {
+                            0% {
+                                transform: rotate(0deg);
+                            }
+                            25% {
+                                transform: rotate(-5deg);
+                            }
+                            50% {
+                                transform: rotate(5deg);
+                            }
+                            75% {
+                                transform: rotate(-5deg);
+                            }
+                            100% {
+                                transform: rotate(0deg);
+                            }
+                        }
+                        
+                        #modal-wrapper {
+                            height: 100vh;
+                            width: 100%;
+                            position: fixed;
+                            top: 0;
+                            left: 0;
+                            background-color: rgba(0, 0, 0, 0.8);
+                            display: none;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                        
+                        #modal-content {
+                            background-image: linear-gradient(to top left, #D2C5FFFF, #ABE4FAFF);
+                            box-shadow: 5px 5px black;
+                            border-radius: 12px;
+                            text-align: center;
+                            width: 50%;
+                            height: fit-content;
+                            padding: 20px;
+                        }
+                        
+                        @media (max-width:760px) {
+                            #modal-content {
+                                width: 100%;
+                            }
+                        }
+                        
+                        #modal-content p {
+                            margin: 20px;
+                        }
+                        
+                        #modal-content i {
+                            margin: 0px 10px;
+                        }
+                        
+                        #modal-content a {
+                            text-decoration: none;
+                            color: black;
+                        }
+                        
+                        #modal-content a:hover {
+                            text-decoration: underline;
+                            color: black;
+                        }
+                        
+                        .close-button-cards {
+                            font-weight: bolder;
+                            position: absolute;
+                            top: 0;
+                            right: 10px;
+                            font-size: 60px;
+                            color: white;
+                            transition: 0.5s;
+                        }
+                        
+                        .close-button-cards:hover {
+                            transition: 0.5s;
+                            color: black;
+                            cursor: pointer;
+                        }
+                        
+                        .flex-about-section {
+                            display: flex;
+                            justify-content: center;
+                        }
+                        
+                        .about-left {
+                            height: 60vh;
+                            width: 40%;
+                        }
+                        
+                        .about-left img {
+                            border-radius: 12px 0px 0px 0px;
+                            height: 100%;
+                            width: 100%;
+                            object-fit: cover;
+                        }
+                        
+                        .about-right {
+                            background-image: linear-gradient(to top left, #D2C5FFFF, #ABE4FAFF);
+                            border-radius: 0px 12px 0px 0px;
+                            height: 60vh;
+                            width: 40%;
+                            box-shadow: 5px 10px #888888;
+                        }
+                        
+                        .about-right h2 {
+                            font-size: 40px;
+                            font-weight: bolder;
+                            text-decoration: underline;
+                            font-family: Arial, Helvetica, sans-serif;
+                            text-align: center;
+                            margin-top: 10px;
+                            font-family: Arial, Helvetica, sans-serif;
+                        }
+                        
+                        .about-right p {
+                            font-family: Arial, Helvetica, sans-serif;
+                            margin: 20px;
+                            text-align: center;
+                        }
+                        
+                        @media (max-width:1024px) {
+                            .flex-about-section {
+                                display: block;
+                            }
+                            .about-left {
+                                border-radius: 12px 12px 0px 0px;
+                                margin: 0 auto 0 auto;
+                                height: 60vh;
+                                width: 80%;
+                                box-shadow: 5px 10px #888888;
+                            }
+                            .about-left img {
+                                border-radius: 12px 12px 0px 0px;
+                            }
+                            .about-right {
+                                border: 1px solid black;
+                                margin: 0 auto 0 auto;
+                                border-radius: 0px;
+                                height: fit-content;
+                                width: 80%;
+                            }
+                        }
+                        
+                        @media (max-width:350px) {
+                            .about-right h2 {
+                                font-size: x-large;
+                            }
+                        }

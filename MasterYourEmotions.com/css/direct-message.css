@@ -1,0 +1,166 @@
+* {box-sizing: border-box;}
+
+#DM {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #44444422;
+    backdrop-filter: blur(4px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#DM > form {
+    width: fit-content;
+    height: fit-content;
+
+    position: relative;
+    top: 0;
+    left: 0;
+
+    background-color: #ABE4FAE6;
+    border-style: solid;
+    border-color: #404040;
+    border-radius: 2ch;
+    box-shadow: 0 0 40px 20px rgba(0,0,0,.25);
+
+    padding: 0.5ch 2ch;
+    display: flex;
+    flex-direction: column;
+}
+
+#DM h3, #DM h5{
+    color: #323232;
+}
+#DM h3 {
+    display: inline;
+    width: fit-content;
+    align-self: center;
+}
+
+#DM .closeWindow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.6ch;
+    font-size: 1.3em;
+
+    display: inline;
+    width: fit-content;
+    color: #323232;
+
+    align-self: end;
+
+    transition-duration: 0.12s;
+}
+
+#DM .closeWindow:hover {
+    transform: scale(1.18);
+}
+
+#DM input, #DM textarea {
+    margin: 0.5em;
+    width: 40ch;
+    border-color: #404040;
+    border-style: solid;
+    border-width: 1px;
+    background-color: #e0e6f2;
+    display: block;
+
+}
+
+#DM .message{
+    min-height: 15em;
+    min-width: 40ch;
+    max-width: 80vw;
+    width: 70ch;
+}
+
+#DM .submit{
+    align-self: end;
+    width: fit-content;
+}
+
+#DM button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.2ch;
+
+
+    width: fit-content;
+    align-self: end;
+    margin-right: 1ch;
+    margin-top: 1ch;
+
+
+    border-radius: 5ch;
+    border-color: black;
+    border-style: solid;
+}
+
+/* Loader ("spinner") från W3Schools    https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_loader */
+#loader {
+    position: absolute;
+    display: none;
+    align-self: center;
+    border:10px solid rgb(0, 0, 0, 0.6);
+    border-radius: 50%;
+    border-top: 10px solid #3498db;
+    width: 75px;
+    height: 75px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+    z-index: 100;
+  }
+
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+/* Form cover (small screen) */
+#loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    color: black;
+    background-color: rgb(255, 255, 255);
+    z-index: 10;
+}
+
+/* Form cover (large screen) */
+@media (min-width: 767px) {
+    #loader-wrapper {
+        min-height: 15em;
+        height: 41.5%;
+        min-width: 40ch;
+        max-width: 80vw;
+        width: 46.9%;
+        box-shadow: 0 3px 6px rgba(190, 189, 189, 0.16), 0 3px 6px rgba(190, 189, 189, 0.16);
+        border-radius: 2ch;
+    }
+
+    #DM input:valid,
+    #DM textarea:valid{
+        border-color: green;
+    }
+
+    #DM input:invalid,
+    #DM textarea:invalid{
+        border-color: red;
+    }
+}
