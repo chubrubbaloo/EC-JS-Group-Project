@@ -1,3 +1,5 @@
+<h1>Projektuppgift - JavaScript</h1>
+
 Det finns idag mängder av mindre företag och startups som inte harnågon ordentlig digital profil i form av en webbsite och som framtidawebbutvecklare blir er uppgift nu att skapa/bygga vidare på en html/css-site där ni applicerar javascript-tekniker för att arbeta in dynamik och interktivitet på siten.
 
 
